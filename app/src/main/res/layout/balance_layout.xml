@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <WebView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/webView"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="get balance"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:hint="address input"
+        android:text="0x28c6c06298d514db089934071355e5743bf21d60"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ERC20TokenAddress"
+        android:hint="ERC20Token address input"
+        android:text="0xdAC17F958D2ee523a2206206994597C13D831ec7"/>
+
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:id="@+id/balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="waiting for get balance..."/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="getBalance"
+        android:textAllCaps="false"
+        android:id="@+id/btn_getBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

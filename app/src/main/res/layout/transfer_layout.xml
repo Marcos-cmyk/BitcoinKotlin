@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <WebView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/webView"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Transfer"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/private_key"
+        android:hint="privateKey input"
+        android:text="6e6fc8e1b12d1075e5df6f3eb0c2010827f7ad18632c4434791cf25d3d4d38d8"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/receive_address"
+        android:hint="receive address input "
+        android:text="0x6648Ee1bc5a10856D72b197cC9bA23B7002AA8F1"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount"
+        android:hint="amount input"
+        android:text="0.00001"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/erc20Token"
+        android:hint="erc20Token address input"
+        android:text="0xdAC17F958D2ee523a2206206994597C13D831ec7"/>
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:id="@+id/hashValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Signature..."/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="Get detail in etherscan.io"
+        android:textAllCaps="false"
+        android:id="@+id/btn_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="estimateTransactionFee"
+        android:textAllCaps="false"
+        android:id="@+id/btn_estimateTransactionFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="transfer"
+        android:textAllCaps="false"
+        android:id="@+id/btn_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

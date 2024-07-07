@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="generateAccount"
+        android:textAllCaps="false"
+        android:id="@+id/generateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginTop="30dp"
+        android:text="importAccountFromPrivateKey"
+        android:textAllCaps="false"
+        android:id="@+id/importAccountFromPrivateKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginTop="30dp"
+        android:text="importAccountFromMnemonic"
+        android:textAllCaps="false"
+        android:id="@+id/importAccountFromMnemonic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginTop="30dp"
+        android:text="getBTCBalance"
+        android:textAllCaps="false"
+        android:id="@+id/getBTCBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginTop="30dp"
+        android:text="EstimateFee"
+        android:textAllCaps="false"
+        android:id="@+id/btn_estimateFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginTop="30dp"
+        android:text="BTCTransfer"
+        android:textAllCaps="false"
+        android:id="@+id/btn_BTCTransfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
