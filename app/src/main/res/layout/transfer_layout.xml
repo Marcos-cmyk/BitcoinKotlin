@@ -20,14 +20,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/private_key"
         android:hint="privateKey input"
-        android:text="6e6fc8e1b12d1075e5df6f3eb0c2010827f7ad18632c4434791cf25d3d4d38d8"/>
+        android:text="Kz3jamEzx6GA8jSW54AkdGb4J1rTcS8fqJZH6vqkKxweZekaB2JF"/>
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/receive_address"
         android:hint="receive address input "
-        android:text="0x6648Ee1bc5a10856D72b197cC9bA23B7002AA8F1"/>
+        android:text="bc1qm34lsc65zpw79lxes69zkqmk6ee3ewf0j77s3h"/>
 
     <EditText
         android:layout_width="fill_parent"
@@ -35,13 +35,6 @@
         android:id="@+id/amount"
         android:hint="amount input"
         android:text="0.00001"/>
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/erc20Token"
-        android:hint="erc20Token address input"
-        android:text="0xdAC17F958D2ee523a2206206994597C13D831ec7"/>
 
     <TextView
         android:layout_marginTop="40dp"
@@ -53,17 +46,9 @@
 
     <Button
         android:layout_marginTop="20dp"
-        android:text="Get detail in etherscan.io"
+        android:text="Get detail in blockchair"
         android:textAllCaps="false"
         android:id="@+id/btn_detail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:layout_marginTop="20dp"
-        android:text="estimateTransactionFee"
-        android:textAllCaps="false"
-        android:id="@+id/btn_estimateTransactionFee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

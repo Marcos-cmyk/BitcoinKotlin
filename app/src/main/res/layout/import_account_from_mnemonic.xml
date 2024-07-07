@@ -18,18 +18,11 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/password"
-        android:hint="password input"
-        android:text="123456789"/>
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/mnemonic"
         android:hint="mnemonic input"
         android:inputType="textMultiLine"
         android:textSize="13sp"
-        android:text=""/>
+        android:text="vacuum seek stove alley butter sunny burger ancient across flower casino give"/>
 
     <EditText
         android:layout_width="fill_parent"

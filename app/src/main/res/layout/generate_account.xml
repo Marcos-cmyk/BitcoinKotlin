@@ -18,13 +18,6 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/password"
-        android:hint="password input"
-        android:text="123456789"/>
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/wallet_detail"
         android:hint="waiting for generate account"
         android:inputType="textMultiLine"

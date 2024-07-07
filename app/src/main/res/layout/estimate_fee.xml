@@ -13,31 +13,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Import Account From PrivateKey"/>
+        android:text="Estimate Fee"/>
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/privateKey"
-        android:hint="PrivateKey input"
-        android:inputType="textMultiLine"
-        android:textSize="13sp"
-        android:text="L2Qh4dbHEig7W7zcrjuQ6csXSfaD22WXoifwi12Qcd9pBf3QKoip"/>
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/wallet_detail"
-        android:hint="waiting for import account"
+        android:id="@+id/fee_detail"
+        android:hint="waiting for estimate fee"
         android:inputType="textMultiLine"
         android:textSize="13sp"
         android:text=""/>
 
     <Button
         android:layout_marginTop="20dp"
-        android:text="Import Account From PrivateKey"
+        android:text="Estimate Fee"
         android:textAllCaps="false"
-        android:id="@+id/btn_import_account_from_privateKey"
+        android:id="@+id/btn_estimate_fee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

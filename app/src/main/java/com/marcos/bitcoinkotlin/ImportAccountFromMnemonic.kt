@@ -7,16 +7,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-//import com.smithsophiav.web3kotlin.ETHWeb
 
 class ImportAccountFromMnemonic: AppCompatActivity() {
     private var title: TextView? = null
-    private var password: TextView? = null
     private var mnemonicEditText: EditText? = null
     private var walletDetailEditText: EditText? = null
     private var importAccountFromMnemonicBtn: Button? = null
     private var mWebView: WebView? = null
-//    private var web3: ETHWeb? = null
+    private var bitcoin: Bitcoin? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.import_account_from_mnemonic)
@@ -24,50 +22,46 @@ class ImportAccountFromMnemonic: AppCompatActivity() {
     }
     private fun setupContent() {
         title = findViewById(R.id.title)
-        password = findViewById(R.id.password)
         mnemonicEditText = findViewById(R.id.mnemonic)
         walletDetailEditText = findViewById(R.id.wallet_detail)
         importAccountFromMnemonicBtn = findViewById(R.id.btn_import_account_from_mnemonic)
         mWebView =  findViewById(R.id.webView)
-//        web3 = ETHWeb(this, _webView = mWebView!!)
+        bitcoin = Bitcoin(this, _webView = mWebView!!)
         importAccountFromMnemonicBtn?.setOnClickListener{
-//            importAccountFromMnemonic()
+            importAccountFromMnemonic()
         }
     }
-//    private fun importAccountFromMnemonic() {
-//        val onCompleted = {result : Boolean ->
-//            println("ETHWeb setup Completed------->>>>>")
-//            println(result)
-//            importAccountFromMnemonicAction()
-//        }
-//        if (web3?.isWeb3LoadFinished == false) {
-//            web3?.setup(true,onCompleted = onCompleted)
-//        }  else  {
-//            importAccountFromMnemonicAction()
-//        }
-//    }
-//
-//    @SuppressLint("SetTextI18n")
-//    private fun importAccountFromMnemonicAction() {
-//        val password = password?.text.toString()
-//        val mnemonic = mnemonicEditText?.getText().toString();
-//        if (password.isNotEmpty()&&mnemonic.isNotEmpty()) {
-//            val onCompleted = {state : Boolean, address: String,privateKey: String,keystore: String,error: String ->
-//                this.runOnUiThread {
-//                    if (state) {
-//                        val text =
-//                            "address: " + address + "\n\n" +
-//                            "privateKey: " + privateKey + "\n\n" +
-//                            "keystore: " + keystore
-//                        walletDetailEditText?.setText(text)
-//                    } else {
-//                        walletDetailEditText?.setText(error)
-//                    }
-//                }
-//            }
-//            walletDetailEditText?.setText("Import Accounting.......")
-//            web3?.importAccountFromMnemonic(mnemonic,password,onCompleted = onCompleted)
-//
-//        }
-//    }
+    private fun importAccountFromMnemonic() {
+        val onCompleted = {result : Boolean ->
+            println("bitcoin setup Completed------->>>>>")
+            println(result)
+            importAccountFromMnemonicAction()
+        }
+        if (bitcoin?.isSuccess == false) {
+            bitcoin?.setup(true,onCompleted = onCompleted)
+        }  else  {
+            importAccountFromMnemonicAction()
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun importAccountFromMnemonicAction() {
+        val mnemonic = mnemonicEditText?.getText().toString();
+        if (mnemonic.isNotEmpty()) {
+            val onCompleted = {state : Boolean, address: String,privateKey: String,error: String ->
+                this.runOnUiThread {
+                    if (state) {
+                        val text =
+                            "address: " + address + "\n\n" +
+                            "privateKey: " + privateKey
+                        walletDetailEditText?.setText(text)
+                    } else {
+                        walletDetailEditText?.setText(error)
+                    }
+                }
+            }
+            walletDetailEditText?.setText("Import Accounting.......")
+            bitcoin?.importAccountFromMnemonic(mnemonic,onCompleted = onCompleted)
+        }
+    }
 }

@@ -20,15 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/address"
         android:hint="address input"
-        android:text="0x28c6c06298d514db089934071355e5743bf21d60"/>
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ERC20TokenAddress"
-        android:hint="ERC20Token address input"
-        android:text="0xdAC17F958D2ee523a2206206994597C13D831ec7"/>
-
+        android:text="bc1qm34lsc65zpw79lxes69zkqmk6ee3ewf0j77s3h"/>
 
     <TextView
         android:layout_marginTop="40dp"
