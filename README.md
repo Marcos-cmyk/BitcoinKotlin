@@ -19,7 +19,7 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 dependencies {
-    implementation 'com.github.Marcos-cmyk:BitcoinKotlin:1.0.0'
+    implementation 'com.github.Marcos-cmyk:BitcoinKotlin:1.0.1'
 }
 ```
 
