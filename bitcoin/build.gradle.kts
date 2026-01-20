@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
-     `maven-publish`
+    id("maven-publish")
 }
 group = "com.github.Marcos-cmyk"
 version = "1.0.2"
@@ -53,9 +53,9 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components["release"])
 
-                groupId = group
+                groupId = project.group.toString()
                 artifactId = "bitcoin"
-                version = version
+                version = project.version.toString()
             }
         }
     }
