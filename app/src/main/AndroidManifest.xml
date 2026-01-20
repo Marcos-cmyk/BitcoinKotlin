@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.marcos.bitcoinkotlin">
-    <uses-permission android:name="android.permission.INTERNET">
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,23 +12,80 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BitcoinKotlin"
-        tools:targetApi="31">
+        android:theme="@style/Theme.BitcoinKotlin">
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.BitcoinKotlin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GetBalanceActivity"/>
-        <activity android:name=".TransferActivity"/>
-        <activity android:name=".GenerateAccount"/>
-        <activity android:name=".EstimateFeeActivity"/>
-        <activity android:name=".ImportAccountFromMnemonic"/>
-        <activity android:name=".ImportAccountFromPrivateKey"/>
+        
+        <!-- Beginner Activities -->
+        <activity
+            android:name=".beginner.GenerateWalletActivity"
+            android:exported="false"
+            android:label="Generate Wallet" />
+        <activity
+            android:name=".beginner.ImportWalletActivity"
+            android:exported="false"
+            android:label="Import Wallet" />
+        <activity
+            android:name=".beginner.QueryUTXOActivity"
+            android:exported="false"
+            android:label="UTXO Query" />
+        <activity
+            android:name=".beginner.AddressValidatorActivity"
+            android:exported="false"
+            android:label="Address Validator" />
+        <activity
+            android:name=".beginner.OneClickTransferActivity"
+            android:exported="false"
+            android:label="One-click Transfer" />
+        <activity
+            android:name=".beginner.BatchTransferActivity"
+            android:exported="false"
+            android:label="Batch Transfer" />
+        <activity
+            android:name=".beginner.MessageSignActivity"
+            android:exported="false"
+            android:label="Sign Message" />
+        <activity
+            android:name=".beginner.MessageVerifyActivity"
+            android:exported="false"
+            android:label="Verify Message" />
+        
+        <!-- Intermediate Activities -->
+        <activity
+            android:name=".intermediate.HTLCGenerateActivity"
+            android:exported="false"
+            android:label="HTLC Address Generation" />
+        <activity
+            android:name=".intermediate.HTLCUnlockActivity"
+            android:exported="false"
+            android:label="HTLC Unlock &amp; Transfer" />
+        <activity
+            android:name=".intermediate.NoSigScriptGenerateActivity"
+            android:exported="false"
+            android:label="No-Sig Script Generation" />
+        <activity
+            android:name=".intermediate.NoSigScriptUnlockActivity"
+            android:exported="false"
+            android:label="No-Sig Script Unlock" />
+        
+        <!-- Advanced Activities -->
+        <activity
+            android:name=".advanced.MultisigGenerateActivity"
+            android:exported="false"
+            android:label="Multisig Address Generation" />
+        <activity
+            android:name=".advanced.MultisigTransferActivity"
+            android:exported="false"
+            android:label="Multisig Transfer" />
     </application>
 
 </manifest>
