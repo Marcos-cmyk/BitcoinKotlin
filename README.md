@@ -69,11 +69,14 @@ Add the following to your `build.gradle.kts` (Module: app):
 
 ```kotlin
 dependencies {
-    implementation("com.github.Marcos-cmyk:BitcoinKotlin:bitcoin:v1.0.2")
+   implementation("com.github.Marcos-cmyk:BitcoinKotlin:1.0.5")
 }
 ```
 
-**Note**: Since `bitcoin` is a submodule, you need to prefix the version with the module name: `bitcoin:v1.0.2`
+**Note**: 
+- Replace `TAG` with your release tag (e.g., `1.0.4`, `v1.0.4`)
+- Since `bitcoin` is a submodule, the format is: `com.github.用户名:仓库名:模块名:版本号`
+- You can check available versions on [JitPack](https://jitpack.io/#Marcos-cmyk/BitcoinKotlin)
 
 ## 🚀 Quick Start
 
