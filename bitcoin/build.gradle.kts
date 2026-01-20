@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+     `maven-publish`
 }
 group = "com.github.Marcos-cmyk"
 version = "1.0.2"
@@ -44,4 +45,18 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
+// Maven Publish configuration for JitPack
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+
+                groupId = group
+                artifactId = "bitcoin"
+                version = version
+            }
+        }
+    }
 }
